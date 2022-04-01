@@ -1,0 +1,72 @@
+{
+    "editSuccess": "Data Edit Successfully!",
+    "deleteSuccess": "Data Delete Successfully!",
+    "addSuccess": "Data Added Successfully!",
+    "restoreSuccess": "Restore Data Successfully!",
+    "Create": "Create",
+    "edit": "Edit",
+    "submit": "submit",
+    "Cancel": "Cancel",
+    "delete": "Delete",
+    "student": {
+        "StudentName": "Student Name",
+        "FatherName": "Father Name",
+        "CNIC": "Father CNIC",
+        "Cast": "Cast",
+        "DoB": "Date of Birth",
+        "Address": "Address",
+        "Post": "Post",
+        "PoliceStation": "Police Station",
+        "District": "District",
+        "RailwayStation": "Railway Station",
+        "Distance": "Distance",
+        "Province": "Province",
+        "Country": "Country",
+        "PinCode": "Pin Code",
+        "FaterContactNumber": "Fater Contact Number",
+        "PreviousBooksReading": "Previous Books Reading",
+        "AdmissionDate": "Admission Date",
+        "PreviousSchoolName": "Previous School Name",
+        "LeavingSchoolReason": "Leaving School Reason",
+        "Comments": "Comments",
+        "CertificateDate": "Certificate Date",
+        "CertificateNumber": "Certificate Number",
+        "Action": "Action"
+    },
+    "result": {
+        "Name": "Name",
+        "Result": "Result",
+        "Annual": "Annual",
+        "Semester": "Semester",
+        "Faculty": "Faculty",
+        "Class": "Class",
+        "Section": "Section",
+        "AddAnnualResult": "Add Annual Result",
+        "AddSemesterResult": "Add Semester Result",
+        "DataisAlreadyadded": "Data is Already added",
+        "SubjectName": "Subject Name",
+        "ObtainMarks": "Obtain Marks",
+        "Year": "Year"
+
+    },
+    "login": {
+        "error": "userName or Password is Incorrect",
+        "rememberme": "Remember me",
+        "Forgotpassword": "Forgot password",
+        "LogIn": "Log In",
+        "registernow": "register now!"
+    },
+    "menu": {
+        "SignOut": "Sign Out"
+    },
+    "attendence": {
+        "Name": "Name",
+        "present": "present",
+        "absent": "absent",
+        "leave": "leave",
+        "Faculty": "Faculty",
+        "Class": "Class",
+        "Section": "Section",
+        "CertificateDate": "Certificate Date"
+    }
+}
