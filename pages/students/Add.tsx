@@ -1,20 +1,10 @@
-import {
-  Button,
-  Col,
-  DatePicker,
-  Form,
-  Input,
-  message,
-  Row,
-  Space,
-  Spin,
-} from "antd";
+import { Button, Col, Form, Input, message, Row, Space, Spin } from "antd";
 import React, { Component, createRef } from "react";
 import AppMenu from "../Menu/AppMenu";
-import { Calendar } from "react-multi-date-picker";
-import arabic from "react-date-object/calendars/arabic";
-import arabic_ar from "react-date-object/locales/arabic_ar";
 import withAuth from "../withAuth";
+import arabic from "react-date-object/calendars/arabic";
+import arabic_locale from "react-date-object/locales/arabic_ar";
+import DatePicker from "react-multi-date-picker";
 import withTranslation from "next-translate/withTranslation";
 import { addStudent, isLoggedIn } from "../api/commonHelper";
 import moment from "moment";
@@ -152,7 +142,12 @@ class Add extends Component<any, any> {
                   label={t("student.AdmissionDate")}
                   name="admissionDate"
                 >
-                  <Calendar calendar={arabic} locale={arabic_ar} />
+                  {/* <Calendar calendar={arabic} locale={arabic_ar} /> */}
+                  <DatePicker
+                    calendar={arabic}
+                    locale={arabic_locale}
+                    // onChange={this.handleChange}
+                  />
                 </Form.Item>
                 <Form.Item
                   name="previousSchoolDetail"
@@ -173,7 +168,11 @@ class Add extends Component<any, any> {
                   label={t("student.CertificateDate")}
                   name="resultIssueDate"
                 >
-                  <Calendar calendar={arabic} locale={arabic_ar} />
+                  <DatePicker
+                    calendar={arabic}
+                    locale={arabic_locale}
+                    // onChange={this.handleChange}
+                  />
                 </Form.Item>
                 <Form.Item
                   name="resultCardNumber"

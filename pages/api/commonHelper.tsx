@@ -41,7 +41,6 @@ const addStudent = async (values: any) => {
     pinCode: values.pinCode,
     fatherContactNumber: values.fatherContactNumber,
     alreadyReadBooks: values.alreadyReadBooks,
-
     admissionDate: values.admissionDate.format(),
     previousSchoolDetail: values.previousSchoolDetail,
     leavingReason: values.leavingReason,

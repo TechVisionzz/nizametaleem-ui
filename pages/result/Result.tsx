@@ -158,7 +158,16 @@ class Result extends Component<any, any> {
   };
   openSemesterModel = async (id: any, name: any) => {
     console.log(id);
-    await this.setState({ semesterModel: true });
+    var selectedItem = this.state.studentDetails.find(
+      (item: any) => item.id == id
+    );
+    // console.log(selectedItem);
+    if (selectedItem) {
+      await this.setState({ student: {} });
+      await this.setState({ semesterModel: true, student: selectedItem });
+      console.log(this.state.student);
+    }
+    // await this.setState({ semesterModel: true });
   };
   render() {
     const { t } = this.props.i18n;

@@ -11,9 +11,9 @@ import {
 } from "antd";
 import React, { Component, createRef } from "react";
 import withTranslation from "next-translate/withTranslation";
-import { Calendar } from "react-multi-date-picker";
 import arabic from "react-date-object/calendars/arabic";
-import arabic_ar from "react-date-object/locales/arabic_ar";
+import arabic_locale from "react-date-object/locales/arabic_ar";
+import DatePicker from "react-multi-date-picker";
 import { addResult, checkAnnualResult } from "../api/commonHelper";
 import withAuth from "../withAuth";
 var myself: any, myform: any;
@@ -184,7 +184,7 @@ class AnnualResult extends Component<any, any> {
                         },
                       ]}
                     >
-                      <Calendar calendar={arabic} locale={arabic_ar} />
+                      <DatePicker calendar={arabic} locale={arabic_locale} />
                     </Form.Item>
                   </Space>
                 </div>
