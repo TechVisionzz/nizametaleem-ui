@@ -10,7 +10,7 @@ import { Select } from "antd";
 import withAuth from "../withAuth";
 import moment from "moment";
 var myself: any;
-class attendence extends Component<any, any> {
+class Add extends Component<any, any> {
   constructor(props: any) {
     super(props);
     myself = this;
@@ -24,6 +24,8 @@ class attendence extends Component<any, any> {
       periods: [],
       attendences: [],
       attendenceDefaultValue: [],
+      date: " ",
+      year: " ",
     };
   }
   getAllFaculty = async () => {
@@ -136,8 +138,8 @@ class attendence extends Component<any, any> {
     this.setState({ isSpinVisible: true });
     var year: any, date: any, year: any, month: any, day: any;
     if (values.attendenceDate) {
-      date = moment(values.attendenceDate).format("MM/DD/YYYY");
-      year = values.attendenceDate.format();
+      date = this.state.date;
+      year = this.state.year;
       var splitDate = year.split("/");
       year = splitDate[0];
       month = splitDate[1];
@@ -181,11 +183,13 @@ class attendence extends Component<any, any> {
         this.setState({ isSpinVisible: false });
       });
   };
-  handleChange(value: any) {
-    console.log(value.format());
-
-    console.log(moment(value.toDate()).format("MM/DD/YYYY"));
-  }
+  handleChange = async (value: any) => {
+    await this.setState({
+      year: moment(value.toDate()).format("YYYY/MM/DD"),
+      date: moment(value.toDate()).format("MM/DD/YYYY"),
+    });
+    console.log(this.state.date);
+  };
   render() {
     const { t } = this.props.i18n;
     const { Option } = Select;
@@ -201,7 +205,7 @@ class attendence extends Component<any, any> {
       },
     ];
     if (periods.length >= 1) {
-      periods.map(async (item: any) => {
+      periods.map((item: any) => {
         var periodObject = {
           title: item.attributes.title,
           key: item.attributes.title,
@@ -347,4 +351,4 @@ class attendence extends Component<any, any> {
     );
   }
 }
-export default withAuth(withTranslation(attendence, "common"));
+export default withAuth(withTranslation(Add, "common"));

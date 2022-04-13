@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "antd": "^4.19.2",
+    "base-64": "^1.0.0",
     "hijrah-date": "^1.0.3",
     "hijri-date-picker": "^1.2.1",
     "moment": "^2.29.1",
@@ -24,6 +25,7 @@
     "strapi-sdk-js": "^2.2.0"
   },
   "devDependencies": {
+    "@types/base-64": "^1.0.0",
     "@types/node": "17.0.21",
     "@types/react": "17.0.40",
     "eslint": "8.11.0",

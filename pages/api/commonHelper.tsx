@@ -5,6 +5,7 @@ var qs = require("qs");
 const strapi = new Strapi({
   url: process.env.STRAPI_URL || "http://localhost:1337",
 });
+// http://azeemdin.synology.me:1339
 const signUp = async (values: any) => {
   await strapi.register({
     email: values.email,
@@ -104,6 +105,13 @@ const getPeriods = async () => {
 const getStudents = async () => {
   return await strapi.find(`students`);
 };
+const getAttendenceReport = async () => {
+  return await strapi.find(`attendence-reports`);
+};
+const getResultReport = async () => {
+  return await strapi.find(`result-reports`);
+};
+
 const checkSemesterResult = async (id: any) => {
   const query = qs.stringify({
     populate: "*",
@@ -172,10 +180,12 @@ const getEditStudent = async () => {
 
 export {
   logOut,
+  getResultReport,
   addAttendence,
   checkSemesterResult,
   checkAnnualResult,
   addResult,
+  getAttendenceReport,
   getPeriods,
   getMenues,
   editStudent,

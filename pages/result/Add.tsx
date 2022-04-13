@@ -8,7 +8,7 @@ import AnnualResult from "./AnnualResult";
 import SemesterResult from "./SemesterResult";
 import withAuth from "../withAuth";
 var myself: any;
-class Result extends Component<any, any> {
+class Add extends Component<any, any> {
   constructor(props: any) {
     super(props);
     myself = this;
@@ -300,4 +300,4 @@ class Result extends Component<any, any> {
     );
   }
 }
-export default withAuth(withTranslation(Result, "common"));
+export default withAuth(withTranslation(Add, "common"));
